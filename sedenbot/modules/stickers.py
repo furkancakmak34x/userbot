@@ -74,7 +74,7 @@ def kang(client, message):
     pname = f'PNAME_{ptime}'
     pnick = f'PNICK_{ptime}'
 
-    name_suffix = ('_anim', ' (Animated)') if anim else ('', '')
+    name_suffix = ('_anim', ' (animated)') if anim else ('', '')
 
     TEMP_SETTINGS[pname] = (
         PACKNAME.replace(' ', '')
@@ -83,9 +83,9 @@ def kang(client, message):
     )
     TEMP_SETTINGS[f'{pname}_TEMPLATE'] = f'a{myacc.id}_by_{myacc.username}_'
     TEMP_SETTINGS[pnick] = (
-        PACKNICK or f'{kanger}\'s UserBot pack {pack}{name_suffix[1]}'
+        PACKNICK or f'{kanger}\'s kang pack {pack}{name_suffix[1]}'
     )
-    TEMP_SETTINGS[f'{pnick}_TEMPLATE'] = f'{kanger}\'s UserBot pack '
+    TEMP_SETTINGS[f'{pnick}_TEMPLATE'] = f'{kanger}\'s kang pack '
 
     limit = '50' if anim else '120'
 
